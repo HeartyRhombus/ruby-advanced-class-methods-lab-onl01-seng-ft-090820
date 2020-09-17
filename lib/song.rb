@@ -42,10 +42,10 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    rows = filename.chomp(".mp3").split(" - ")
+    song_entries = filename.chomp(".mp3").split(" - ")
     song = Song.new
-    song.name = rows[1]
-    song.artist_name = rows[0]
+    song.name = song_entries[1]
+    song.artist_name = song_entries[0]
     song
   end
 
